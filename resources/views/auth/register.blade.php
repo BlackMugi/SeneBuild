@@ -21,7 +21,7 @@
 
 
             <!-- Password -->
-                <x-input-label for="password" :value="__('Password')" />
+                <x-input-label class="input" for="password" :value="__('Password')" />
 
                 <x-text-input id="password" class="block mt-1 w-full"
                                 type="password"
@@ -31,7 +31,7 @@
                 <x-input-error :messages="$errors->get('password')" class="text-sm text-red-600 space-y-1" />
 
             <!-- Confirm Password -->
-                <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+                <x-input-label class="input" for="password_confirmation" :value="__('Confirm Password')" />
 
                 <x-text-input id="password_confirmation" class="block mt-1 w-full"
                                 type="password"
