@@ -14,9 +14,86 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+/*
+|--------------------------------------------------------------------------
+| Les routes des pages qui se trouve dans notre Barre de Navigation
+|--------------------------------------------------------------------------
+|
+*/
+
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('accueil');
+
+
+//  Route pour Notre page à propos
+Route::get('/about', function () {
+    return view('pages.navigation.about');
+})->name('à propos');;
+
+
+//  Route pour notre page aide & assistance
+Route::get('/help', function () {
+    return view('pages.navigation.help');
+})->name('aide & assistance');;
+
+
+//  Route pour notre page soumettre une demande
+Route::get('/srequest', function () {
+    return view('pages.navigation.srequest');
+})->name('soumettre une demande');;
+
+
+//  Route pour notre page suivis du status
+Route::get('/status', function () {
+    return view('pages.navigation.status');
+})->name('suivis du statut');;
+
+
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+/*
+|--------------------------------------------------------------------------
+| Nous allons définir les routes qui se trouvent au niveau du footer de
+| de notre application
+|--------------------------------------------------------------------------
+|
+*/
+
+//  Route pour Notre page à propos
+Route::get('/document', function () {
+    return view('pages.footer.document');
+})->name('document à fournir');;
+
+
+//  Route pour Notre page à propos
+Route::get('/faq', function () {
+    return view('pages.footer.faq');
+})->name('faq');;
+
+
+//  Route pour Notre page à propos
+Route::get('/mention', function () {
+    return view('pages.footer.mention');
+})->name('mention légale');;
+
+
+//  Route pour Notre page à propos
+Route::get('/politique', function () {
+    return view('pages.footer.politique');
+})->name('politique de confidentialité');;
+
+
+//  Route pour Notre page à propos
+Route::get('/qui-sommes-nous', function () {
+    return view('pages.footer.qui-sommes-nous');
+})->name('qui sommes nous');;
+
+// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Route::get('/dashboard', function () {
     return view('dashboard');
