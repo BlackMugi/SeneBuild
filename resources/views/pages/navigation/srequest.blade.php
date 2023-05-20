@@ -1,7 +1,7 @@
 @extends("base")
 
 
-    @section("title", "Accueil")
+    @section("title", "Soumettre une demande")
 
 
     @section("content")

@@ -64,31 +64,31 @@ Route::get('/status', function () {
 |
 */
 
-//  Route pour Notre page à propos
+//  Route pour Notre page document à fournir
 Route::get('/document', function () {
     return view('pages.footer.document');
 })->name('document à fournir');;
 
 
-//  Route pour Notre page à propos
+//  Route pour Notre page faq
 Route::get('/faq', function () {
     return view('pages.footer.faq');
 })->name('faq');;
 
 
-//  Route pour Notre page à propos
+//  Route pour Notre pagemention légale
 Route::get('/mention', function () {
     return view('pages.footer.mention');
 })->name('mention légale');;
 
 
-//  Route pour Notre page à propos
+//  Route pour Notre page politique de confidentialité
 Route::get('/politique', function () {
     return view('pages.footer.politique');
 })->name('politique de confidentialité');;
 
 
-//  Route pour Notre page à propos
+//  Route pour Notre page sommes nous
 Route::get('/qui-sommes-nous', function () {
     return view('pages.footer.qui-sommes-nous');
 })->name('qui sommes nous');;
