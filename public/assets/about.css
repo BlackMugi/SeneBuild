@@ -1,0 +1,66 @@
+section.header{
+    background: url(../../../image/about-bg.png);
+    background-size: 100% 125%;
+    width: auto;
+    height: 20vh;
+    margin-bottom: 30px;
+}
+
+h1{
+    color: #ffff;
+    font-weight: 600 bold;
+    margin-left: 600px;
+    padding-top: 30px;
+}
+
+section.body{
+    padding: 0;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+div.wl h3{
+    color: #000;
+    margin-left: 500px;
+}
+
+div.intro-page{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+div.top-logo img{
+    width: 400px;
+    height: 200px;
+}
+
+div.intro{
+    color: #3f3f3f;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-left: 0px;
+}
+
+div.intro p{
+    margin-left: 20px;
+}
+
+div.crew-img img{
+    width: 300px;
+    height: 200px;
+}
+
+div.top-xp{
+    color: #3f3f3f;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-left: 100px;
+}
+
+div.top-xp p{
+    margin-right: 20px;
+}
+
+
