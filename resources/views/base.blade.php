@@ -33,7 +33,7 @@
                     <a class="nav" href="{{ route ('politique de confidentialité')}}"><span class="icon-texts">Politique de confidentialités</span></a><br>
                     <a class="nav" href="{{ route ('mention légale')}}"><span class="icon-texts">Mentions légales</span></a><br>
                     <a class="nav" href="{{ route ('faq')}}"><span class="icon-texts">FAQ</span></a><br>
-                    <a class="nav" href="{{ route ('document à fournir')}}"><span class="icon-texts">Composé du document</span></a><br>
+                    <a class="nav" href="{{ route ('ressources outiles')}}"><span class="icon-texts">Ressources utile</span></a><br>
                 </div>
 
                 <!--contact-->

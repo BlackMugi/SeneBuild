@@ -66,8 +66,8 @@ Route::get('/status', function () {
 
 //  Route pour Notre page document à fournir
 Route::get('/document', function () {
-    return view('pages.footer.document');
-})->name('document à fournir');;
+    return view('pages.footer.ressources');
+})->name('ressources outiles');;
 
 
 //  Route pour Notre page faq

@@ -1,0 +1,19 @@
+section.header{
+    background: url(../../../image/help-bg.png);
+    background-size: 100% 125%;
+    width: auto;
+    height: 20vh;
+    margin-bottom: 30px;
+}
+
+h1{
+    color: #ffff;
+    font-weight: 600 bold;
+    text-align: center;
+    padding-top: 30px;
+}
+
+div.wl h3{
+    color: #000;
+    text-align: center;
+}

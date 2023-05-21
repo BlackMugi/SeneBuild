@@ -1,12 +1,13 @@
+{{-- Importation de notre page de base --}}
 @extends("base")
-
-
     @section("title", "À propos")
 
 
     @section("content")
     <link rel="stylesheet" href="{{ asset ('assets/about.css')}}">
 
+
+    {{-- Notre entête de page --}}
         <section class="header">
             <h1>À propos</h1>
         </section>
@@ -45,10 +46,13 @@
 
             </div>
 
-            <div class="offre">
-                <h2>Ce que nous offrons:</h2>
-                <div class="">
+            <h2>Ce que nous offrons:</h2>
+
+            <div class="aligne">
+
+                <div class="sett">
                     <span>-Demande de permis de construire en ligne :</span>
+                    <hr>
                     <p>Notre plateforme vous
                         permet de remplir facilement les formulaires nécessaires à la demande
                         de permis de construire. Nous avons simplifié le processus en le rendant
@@ -58,8 +62,11 @@
 
                 </div>
 
-                <div class="">
-                        <p>-Assistance personnalisée : Notre équipe est là pour vous
+                <div class="aligne1">
+                    <span>-Assistance personnalisée :</span>
+                    <br>
+                    <hr>
+                        <p>Notre équipe est là pour vous
                            accompagner tout au long de votre demande. Si vous avez des
                            questions ou des problèmes, n'hésitez pas à nous contacter.
                            Nous sommes là pour vous aider à surmonter les obstacles éventuels
@@ -67,8 +74,10 @@
                         </p>
                 </div>
 
-                <div class="">
+                <div class="aligne1">
                     <span>-Suivi de votre demande :</span>
+                    <br>
+                    <hr>
                     <p> Vous pouvez suivre l'avancement de votre
                         demande directement depuis votre compte utilisateur. Nous vous tenons
                         informé des étapes clés du processus et vous alertons en cas de besoin
@@ -76,8 +85,10 @@
                     </p>
                 </div>
 
-                <div class="">
+                <div class="aligne1">
                     <span>-Ressources utiles :</span>
+                    <br>
+                    <hr>
                     <p> Nous mettons à votre disposition des ressources
                         pratiques, telles que des guides et des conseils, pour vous aider à comprendre
                         les exigences du processus de demande de permis de construire. Vous y trouverez
@@ -88,7 +99,7 @@
             </div>
 
             <div class="intro-page">
-                <div class="top-xp">
+                <div>
                     <p>Chez SeneBuild, nous croyons en la simplification et la transparence.
                        Nous nous engageons à fournir un service fiable et efficace, en mettant
                        l'accent sur la satisfaction de nos utilisateurs.<br>
