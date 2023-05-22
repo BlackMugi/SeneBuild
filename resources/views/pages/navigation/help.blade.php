@@ -22,14 +22,13 @@
                 </p>
             </div>
 
-            <div class="intro-img">
-                <img src="" alt="">
-            </div>
+          
 
             <h2>Comment pouvons-nous vous aider ?</h2>
 
-            <div class="aligne">
-                <div class="sett">
+            <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
                     <span>-FAQ :</span>
                     <p> Consultez notre section FAQ (Foire aux questions) pour trouver des réponses aux
                         questions courantes concernant le processus de demande de permis de construire.
@@ -38,7 +37,7 @@
                     </p>
                 </div>
 
-                <div class="sett">
+                <div class="carousel-item">
                     <span>-Support en ligne  :</span>
                     <p>Notre équipe de support est disponible pour répondre à toutes vos
                        questions et vous aider en cas de problèmes techniques ou de difficultés lors de
@@ -48,7 +47,7 @@
                     </p>
                 </div>
 
-                <div class="sett">
+                <div class="carousel-item">
                     <span>-Guides et ressources :</span>
                     <p>Nous mettons à votre disposition des guides détaillés et des ressources utiles
                        pour vous aider à naviguer à travers le processus de demande de permis de
@@ -58,7 +57,7 @@
                     </p>
                 </div>
 
-                <div class="sett">
+                <div class="carousel-item">
                     <span>-Suivi de votre demande :</span>
                     <p> Notre plateforme vous permet de suivre facilement l'état d'avancement de votre
                         demande de permis de construire. Vous serez informé des différentes étapes du
@@ -68,7 +67,7 @@
                     </p>
                 </div>
 
-                <div class="sett">
+                <div class="carousel-item">
                     <span>-Assistance personnalisée:</span>
                     <p>Chaque projet de construction est unique, c'est pourquoi nous offrons une assistance
                        personnalisée adaptée à vos besoins spécifiques. Notre équipe d'experts est là
@@ -77,10 +76,20 @@
                        et à résoudre tout problème éventuel.
                     </p>
                 </div>
-
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
+          
+            </div>
+            
 
-            <div>
+            <div class="end-content">
                 <p>
                     Notre objectif est de vous offrir une expérience sans tracas lors de votre
                     demande de permis de construire.Nous sommes engagés à fournir un service
