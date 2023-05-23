@@ -25,6 +25,7 @@ footer.section1{
  .icon-texts:hover{
     text-decoration: none;
     font-size: 20px;
+    color: #3553f0;
     font-family: sans-serif;
     transition: 0.2s;
  }
@@ -75,8 +76,18 @@ footer.section1{
     font-family: serif;
  }
 
+
  .icon-texts{
     margin-left: 10px;
+    text-align: justify;
+    color:#727576;
+    font-size: 20px;
+    font-family: serif;
+ }
+
+ .icon-texts{
+    margin-left: 10px;
+
  }
 
  div.icon-cont{
@@ -160,22 +171,16 @@ section.footer{
 }
 
 
-.icon-text{
-    text-decoration: none;
-    font-size: 18px;
-    font-family: sans-serif;
-}
-
 .icon-textt{
     text-decoration: none;
     font-size: 18px;
     font-family: sans-serif;
 }
 
-
 .icon-textt:hover{
     text-decoration: none;
     font-size: 20px;
     font-family: sans-serif;
+    color:#3553f0;
     transition: 0.2s;
 }

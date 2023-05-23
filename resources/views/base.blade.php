@@ -29,11 +29,11 @@
                 {{-- Liens Rapide --}}
                 <div class="side1">
                     <h3>Liens rapides</h3>
-                    <a class="nav" href="{{ route ('qui sommes nous')}}"><span class="icon-texts">Qui sommes-nous?</span></a><br>
-                    <a class="nav" href="{{ route ('politique de confidentialité')}}"><span class="icon-texts">Politique de confidentialités</span></a><br>
-                    <a class="nav" href="{{ route ('mention légale')}}"><span class="icon-texts">Mentions légales</span></a><br>
-                    <a class="nav" href="{{ route ('faq')}}"><span class="icon-texts">FAQ</span></a><br>
-                    <a class="nav" href="{{ route ('ressources outiles')}}"><span class="icon-texts">Ressources utile</span></a><br>
+                    <a class="nav-foot" href="{{ route ('qui sommes nous')}}"><span class="icon-texts">Qui sommes-nous?</span></a><br>
+                    <a class="nav-foot" href="{{ route ('politique de confidentialité')}}"><span class="icon-texts">Politique de confidentialités</span></a><br>
+                    <a class="nav-foot" href="{{ route ('mention légale')}}"><span class="icon-texts">Mentions légales</span></a><br>
+                    <a class="nav-foot" href="{{ route ('faq')}}"><span class="icon-texts">FAQ</span></a><br>
+                    <a class="nav-foot" href="{{ route ('ressources outiles')}}"><span class="icon-texts">Ressources utile</span></a><br>
                 </div>
 
                 <!--contact-->
