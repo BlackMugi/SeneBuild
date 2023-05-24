@@ -17,17 +17,17 @@ h1{
 .intro-txt{
     text-align:center;
     background-color: rgba(0, 0, 255, 0.5);
-    margin-top: 100px; 
-   width: 800px;
-   margin-left:300px;
-   padding:50px;
-   color: #fff;
-   margin-bottom:auto;
-   position: relative;
-   font-size: larger;
-   font-weight:bold;
+    margin-top: 100px;
+    width: 800px;
+    margin-left:300px;
+    padding:50px;
+    color: #fff;
+    margin-bottom:auto;
+    position: relative;
+    font-size: larger;
+    font-weight:bold;
     font-family: Arial, Helvetica, serif;
-    
+
 }
 
 h2{
@@ -39,7 +39,7 @@ h2{
     color:white;
     width:15%;
     opacity: 5;
-    
+
 }
 
 .carousel-inner{
@@ -51,7 +51,7 @@ h2{
 
 .carousel-item{
     text-align: center;
-    margin-top: 30px; 
+    margin-top: 30px;
     width:700px;
     margin-left:330px;
     padding:20px;
@@ -68,19 +68,19 @@ h2{
 .end-content{
     text-align:center;
     background-color: rgba(0, 0, 255, 0.5);
-    margin-bottom:100px; 
-   width: 800px;
-   margin-left:300px;
-   padding:50px;
-   color: #fff;
-   margin-top:100px;
-   position: relative;
-   font-size: larger;
-   font-weight: bold;
-   font-family: Arial, Helvetica, serif;
+    margin-bottom:100px;
+    width: 800px;
+    margin-left:300px;
+    padding:50px;
+    color: #fff;
+    margin-top:100px;
+    position: relative;
+    font-size: larger;
+    font-weight: bold;
+    font-family: Arial, Helvetica, serif;
 }
 
 h4{
     text-align: center;
-   
+
 }
