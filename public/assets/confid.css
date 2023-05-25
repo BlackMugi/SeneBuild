@@ -12,3 +12,21 @@ h1{
     text-align: center;
     padding-top: 30px;
 }
+
+h2{
+    text-align: center;
+    color: darkred;
+}
+div.intro-page{
+    padding:20px;
+    margin:20px;
+    text-align: justify;
+}
+
+.texte{
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    font-size: larger;
+    font-weight: bold;
+}

@@ -12,3 +12,13 @@ h1{
     text-align: center;
     padding-top: 30px;
 }
+
+div.intro-page{
+    padding:20px;
+    margin:20px;
+    text-align: center;
+}
+h4{
+    text-align: center;
+    color: darkred;
+}

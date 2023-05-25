@@ -42,4 +42,20 @@ div.aligne1{
 
 h2{
     text-align: center;
+    color:darkred;
+}
+
+p.texte{
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+h4{
+    text-align:start;
+    margin:0;
+    padding:0;
+
 }

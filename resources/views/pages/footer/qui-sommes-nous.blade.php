@@ -13,7 +13,7 @@
 
             <div class="intro-page">
                 <div class="intro">
-                    <p>SeneBuild est une entreprise spécialisée dans les services de demande de
+                    <p class="texte">SeneBuild est une entreprise spécialisée dans les services de demande de
                        permis de construire au Sénégal. Notre équipe est composée d'experts
                        passionnés par l'architecture, l'urbanisme et les nouvelles technologies.
                        Nous avons combiné nos connaissances et notre expérience pour créer une
@@ -96,7 +96,7 @@
                 </div>
 
                 <div>
-                    <p>
+                    <p class="texte">
                         Nous sommes impatients de vous accompagner dans la réalisation de vos
                         projets de construction au Sénégal. N'hésitez pas à nous contacter si vous
                         avez des questions ou des commentaires. Nous sommes là pour vous aider !
