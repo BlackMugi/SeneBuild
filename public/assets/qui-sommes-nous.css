@@ -18,3 +18,28 @@ section.body{
     margin-left: 150px;
     margin-right: 150px;
 }
+
+div.aligne{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    height: 400px;
+}
+
+div.sett{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 27px;
+    
+}
+
+div.aligne1{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 27px;
+    
+}
+
+h2{
+    text-align: center;
+}
