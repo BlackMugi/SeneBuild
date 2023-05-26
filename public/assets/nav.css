@@ -1,3 +1,4 @@
+@import url('lib/bootstrap/css/bootstrap.css');
 img.logo{
     margin-left: 15px;
     width: 200px;
@@ -18,8 +19,8 @@ a.nav-link{
 }
 
 a.nav-link:hover{
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
     font-size: 19px;
     transition: 0.2s;
     color: #3553f0;
@@ -56,4 +57,56 @@ button.login:hover{
     cursor: pointer;
     font-size: 18px;
     transition: 0.1s;
+}
+
+
+.dropdown{
+    display: flex;
+    align-items: center;
+    margin-right: 85px;
+}
+
+.bloc-top{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    align-items: center;
+    background-color: #3553f0;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.bloc-top:hover{
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    align-items: center;
+    background-color: #3553f0;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.dashboard{
+    margin-right: 10px;
+}
+
+.dashboard:hover{
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+.logout:hover{
+    width: 32px;
+    height: 32px;
+    margin-left: -2px;
 }

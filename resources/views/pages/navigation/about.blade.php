@@ -1,8 +1,6 @@
 {{-- Importation de notre page de base --}}
 @extends("base")
     @section("title", "À propos")
-
-
     @section("content")
     <link rel="stylesheet" href="{{ asset ('assets/about.css')}}">
 

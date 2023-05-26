@@ -32,25 +32,26 @@ Route::get('/', function () {
 //  Route pour Notre page à propos
 Route::get('/about', function () {
     return view('pages.navigation.about');
-})->name('à propos');;
+})->name('à propos');
 
 
 //  Route pour notre page aide & assistance
 Route::get('/help', function () {
     return view('pages.navigation.help');
-})->name('aide & assistance');;
+})->name('aide & assistance');
 
 
 //  Route pour notre page soumettre une demande
 Route::get('/srequest', function () {
     return view('pages.navigation.srequest');
-})->name('soumettre une demande');;
+})->middleware(['auth', 'verified'])->name('soumettre une demande');
+
 
 
 //  Route pour notre page suivis du status
 Route::get('/status', function () {
     return view('pages.navigation.status');
-})->name('suivis du statut');;
+})->middleware(['auth', 'verified'])->name('suivis du statut');
 
 
 // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -103,6 +104,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
 });
 
 require __DIR__.'/auth.php';
+
+

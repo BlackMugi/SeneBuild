@@ -46,7 +46,9 @@ footer.section1{
 
  }
 
-
+.side1 a{
+    text-decoration: none;
+}
 
  .side1 h3{
     text-align: center;

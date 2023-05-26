@@ -1,0 +1,10 @@
+@import url(../assets/lib/bootstrap/css/bootstrap.css);
+section.draft{
+    background-color: aqua;
+}
+
+.draft img{
+    width: 600px;
+    height: auto;
+    margin-left: 50px;
+}
