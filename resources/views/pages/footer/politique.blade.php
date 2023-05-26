@@ -16,7 +16,7 @@
 
             <div class="intro-page">
                 <div>
-                    <p>Chez SeneBuild, nous accordons une grande importance à la confidentialité
+                    <p class="texte">Chez SeneBuild, nous accordons une grande importance à la confidentialité
                        et à la protection de vos données personnelles. Cette politique de
                        confidentialité explique comment nous collectons, utilisons, stockons et
                        protégeons vos informations lors de votre utilisation de notre plateforme
@@ -89,7 +89,7 @@
                 </div>
             </div>
 
-            <p>Nous sommes engagés à respecter votre confidentialité et à protéger vos informations
+            <p class="texte">Nous sommes engagés à respecter votre confidentialité et à protéger vos informations
                personnelles. Si vous avez des questions ou des préoccupations concernant notre
                politique de confidentialité, n'hésitez pas à nous contacter.
             </p>

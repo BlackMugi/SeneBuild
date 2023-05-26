@@ -18,3 +18,44 @@ section.body{
     margin-left: 150px;
     margin-right: 150px;
 }
+
+div.aligne{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    height: 400px;
+}
+
+div.sett{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 27px;
+    
+}
+
+div.aligne1{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 27px;
+    
+}
+
+h2{
+    text-align: center;
+    color:darkred;
+}
+
+p.texte{
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+h4{
+    text-align:start;
+    margin:0;
+    padding:0;
+
+}
