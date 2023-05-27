@@ -110,7 +110,10 @@
                 <div id="flush-collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
                         <p class="text-secondary">
-
+                            Le coût total varie selon les localités. Il se repartit ainsi : <br> <br>
+                            -Le quittance de domaine qui est de 5000F CFA. <br> <br>
+                            -Le Timbre fiscal qui est de 1000F CFA. <br> <br>
+                            -Le quittance mairie qui varie en fonction des communes.
                         </p>
                     </div>
                 </div>
