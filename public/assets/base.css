@@ -186,3 +186,28 @@ section.footer{
     color:#3553f0;
     transition: 0.2s;
 }
+
+
+/* ////////////////////////////////////////////////////////////////////////////////// */
+
+/* Css pour La page Faq */
+
+section.faqheader{
+    background: url(../image/confidentialité.png);
+    background-size: 100% 125%;
+    width: auto;
+    height: 20vh;
+    margin-bottom: 30px;
+}
+
+h1.faqh1{
+    color: #ffff;
+    font-weight: 600 bold;
+    text-align: center;
+    padding-top: 30px;
+}
+
+section.faqbody{
+    margin-left: 100px;
+    margin-right: 100px;
+}

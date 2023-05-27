@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\PermisDeConstruireController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,10 +43,8 @@ Route::get('/help', function () {
 
 
 //  Route pour notre page soumettre une demande
-Route::get('/srequest', function () {
-    return view('pages.navigation.srequest');
-})->middleware(['auth', 'verified'])->name('soumettre une demande');
-
+Route::get('/srequest', [PermisDeConstruireController::class, 'srequest'])->middleware(['auth', 'verified'])->name('soumettre une demande');
+Route::post('/demande-permis-construire', [PermisDeConstruireController::class, 'store']);
 
 
 //  Route pour notre page suivis du status

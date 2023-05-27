@@ -1,10 +1,74 @@
 @import url(../assets/lib/bootstrap/css/bootstrap.css);
 section.draft{
-    background-color: aqua;
+    display: flex;
+    background-color: dark;
 }
 
 .draft img{
-    width: 600px;
+    width: 630px;
     height: auto;
     margin-left: 50px;
 }
+
+div.form{
+    background-color: beige;
+    width: 630px;
+    height: auto;
+    margin-right: 50px;
+}
+
+h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+div.demandeur{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+div.row{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+div.level{
+    display: flex;
+}
+
+input.submit{
+    margin-left: 73px;
+    margin-top: 20px;
+    width: 480px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #3553f0;
+    border-radius: 5px;
+    border: none;
+    color: #ffff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+input.submit:hover{
+    margin-left: 50px;
+    margin-top: 20px;
+    width: 515px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #0029ff;
+    border-radius: 5px;
+    border: none;
+    color: #b2b4c0;
+    font-size: 20px;
+    font-weight: 800;
+    transition: 0.1s;
+}
+
