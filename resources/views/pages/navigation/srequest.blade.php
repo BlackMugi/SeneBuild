@@ -15,7 +15,7 @@
         <div class="form">
             <h1>Faire une demande</h1>
 
-            <form method="POST" action="/srequest" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('facture') }}" enctype="multipart/form-data">
                 @csrf
 
                 <div class="demandeur">
@@ -41,16 +41,16 @@
                       <label class="form-label" for="type_batiment">Type de Bâtiment:</label>
                       <select class="form-select" id="type_batiment" name="type_batiment" required>
                         <option disabled selected hidden><p class="text-secondary fst-italic"> --Choisir--</p></option>
-                        <option value="RDC">Commercial</option>
-                        <option value="R+1">Habitation</option>
+                        <option value="Commercial">Commercial</option>
+                        <option value="Habitation">Habitation</option>
                       </select>
                     </div>
                     <div class="col-md-5 mb-3">
                       <label class="form-label" for="commune">Commune:</label>
                       <select id="commune" class="form-select" name="commune" required>
                         <option disabled selected hidden>--Choisir--<p class="text-secondary fst-italic"></p></option>
-                        <option value="Dakar">Grand Yoff</option>
-                        <option value="Thies">Thies</option>
+                        <option value="Grand Yoff">Grand Yoff</option>
+                        <option value="Thiès">Thiès</option>
                       </select>
                     </div>
                 </div>
@@ -60,17 +60,17 @@
                       <label class="form-label" for="niveau">Niveau:</label>
                       <select class="form-select" id="niveau" name="niveau" required>
                         <option disabled selected hidden><p class="text-secondary">--Choisir--</p></option>
-                        <option value="RDC">RDC</option>
-                        <option value="R+1">R+1</option>
-                        <option value="R+2">R+2</option>
-                        <option value="R+3">R+3</option>
-                        <option value="R+4">R+4</option>
-                        <option value="R+5">R+5</option>
-                        <option value="R+6">R+6</option>
-                        <option value="R+7">R+7</option>
-                        <option value="R+8">R+8</option>
-                        <option value="R+9">R+9</option>
-                        <option value="R+10">R+10</option>
+                        <option value="1">RDC</option>
+                        <option value="2">R+1</option>
+                        <option value="3">R+2</option>
+                        <option value="4">R+3</option>
+                        <option value="5">R+4</option>
+                        <option value="6">R+5</option>
+                        <option value="7">5+6</option>
+                        <option value="8">R+7</option>
+                        <option value="9">R+8</option>
+                        <option value="10">R+9</option>
+                        <option value="11">R+10</option>
                       </select>
                     </div>
                     <div class="col-md-5 mb-3">
@@ -92,7 +92,9 @@
             </form>
         </div>
 
+
     </section>
+    
 
 </body>
 </html>

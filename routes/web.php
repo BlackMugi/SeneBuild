@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\PermisDeConstruireController;
+use App\Http\Controllers\DemandeController;
+use App\Http\Controllers\PaiementController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,8 +44,11 @@ Route::get('/help', function () {
 
 
 //  Route pour notre page soumettre une demande
-Route::get('/srequest', [PermisDeConstruireController::class, 'srequest'])->middleware(['auth', 'verified'])->name('soumettre une demande');
-Route::post('/demande-permis-construire', [PermisDeConstruireController::class, 'store']);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/srequest', [DemandeController::class, 'demande'])->name('soumettre une demande');
+    Route::post('/srequest', [DemandeController::class, 'facture'])->name('facture');
+});
+require __DIR__.'/auth.php';
 
 
 //  Route pour notre page suivis du status

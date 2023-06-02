@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('niveau');
             $table->string('dimensions');
             $table->binary('fichier_pdf');
-            $table->integer('prix');
+            $table->integer('prix_total');
             $table->timestamps();
         });
     }
