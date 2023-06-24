@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Soumission;
+
 
 class User extends Authenticatable
 {
@@ -41,4 +43,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    // On va mettre en relation notre model User avec notre model demandes
+
+    public function requete()
+    {
+        return $this->hasMany(Requete::class, 'user_id');
+    }
 }

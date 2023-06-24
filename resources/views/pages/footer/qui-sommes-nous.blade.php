@@ -2,7 +2,7 @@
     @section("title", "Qui sommes nous ?")
     @section("content")
         {{-- Liason de notre page avec du css --}}
-        <link rel="stylesheet" href="{{ asset ('assets/qui-sommes-nous.css')}}">
+        <link rel="stylesheet" href="{{ asset ('css/qui-sommes-nous.css')}}">
 
         {{-- L'entête de notre page --}}
         <section class="header">

@@ -1,6 +1,6 @@
  {{-- Liaison de notre page d'accueil avec notre feuille de style --}}
 
-<link rel="stylesheet" href="{{ asset ('assets/home.css')}}">
+<link rel="stylesheet" href="{{ asset ('css/home.css')}}">
 
     <div class="header">
         @extends("base")
@@ -14,11 +14,22 @@
                     Votre permis de construire, <br>plus rapide, plus efficace!
                 </h1>
             </div>
-            <!-- le bouton inscription-->
-            <a href="{{ route('register') }}">
 
-                <button class="inscription">S'inscrire gratuitement</button>
-            </a>
+            <!-- le bouton inscription-->
+            <div>
+                @if (Route::has('login'))
+                    @auth
+                        <a href="{{ route ('soumettre une demande')}}">
+                            <button class="inscription">soumettre une demande</button>
+                        </a>
+                    @else
+                        <a href="{{ route('register') }}">
+                            <button class="inscription">S'inscrire gratuitement</button>
+                        </a>
+                    @endauth
+                @endif
+            </div>
+
         </div>
     </div>
 

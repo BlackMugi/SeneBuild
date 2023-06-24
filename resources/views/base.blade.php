@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> @yield("title") </title>
     {{-- Liaison de notre feuille de style --}}
-    <link rel="stylesheet" href="{{ asset ('assets/base.css')}}">
+    <link rel="stylesheet" href="{{ asset ('css/base.css')}}">
 </head>
 <body>
     {{-- Notre brre de navigation --}}
@@ -33,7 +33,7 @@
                     <a class="nav-foot" href="{{ route ('politique de confidentialité')}}"><span class="icon-texts">Politique de confidentialités</span></a><br>
                     <a class="nav-foot" href="{{ route ('mention légale')}}"><span class="icon-texts">Mentions légales</span></a><br>
                     <a class="nav-foot" href="{{ route ('faq')}}"><span class="icon-texts">FAQ</span></a><br>
-                    <a class="nav-foot" href="{{ route ('ressources outiles')}}"><span class="icon-texts">Ressources utile</span></a><br>
+                    <a class="nav-foot" href="{{ route ('ressources outiles')}}"><span class="icon-texts">Ressources utiles</span></a><br>
                 </div>
 
                 <!--contact-->

@@ -4,7 +4,7 @@
     @section("title", "Aide & Assistance")
     @section("content")
 
-    <link rel="stylesheet" href="{{ asset ('assets/help.css')}}">
+    <link rel="stylesheet" href="{{ asset ('css/help.css')}}">
 
     <section class="header">
         <h1>Aide & Assistance</h1>
@@ -22,7 +22,7 @@
                 </p>
             </div>
 
-          
+
 
             <h2>Comment pouvons-nous vous aider ?</h2>
 
@@ -85,9 +85,9 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-          
+
             </div>
-            
+
 
             <div class="end-content">
                 <p>

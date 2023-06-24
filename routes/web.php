@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DemandeController;
-use App\Http\Controllers\PaiementController;
+use App\Http\Controllers\Admin\Postcontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,16 +45,36 @@ Route::get('/help', function () {
 
 //  Route pour notre page soumettre une demande
 Route::middleware(['auth'])->group(function () {
-    Route::get('/srequest', [DemandeController::class, 'demande'])->name('soumettre une demande');
-    Route::post('/srequest', [DemandeController::class, 'facture'])->name('facture');
+    Route::get('/srequest', [DemandeController::class, 'requete'])->name('soumettre une demande');
+    Route::post('/srequest', [DemandeController::class, 'demande'])->name('demande');
+    Route::get('/status', [DemandeController::class, 'suivis'])->name('suivis du statut');
+
+    Route::middleware(['admin'])->name('admin.')->prefix('admin')->group(function () {
+        Route::resource('post',Postcontroller::class);
+        Route::get('/admin_dashboard', [PostController::class, 'admin_dashboard'])->name('admin_dashboard');
+        Route::get('/role', [PostController::class, 'role'])->name('role');
+        Route::get('/demandes', [PostController::class, 'demandes'])->name('demandes');
+        Route::get('/demandes-acceptees', [PostController::class, 'demandes_acceptées'])->name('demandes_acceptees');
+        Route::get('/demandes-refusees', [PostController::class, 'demandes_refusées'])->name('demandes_refusees');
+        Route::get('/demandes-en-cours', [PostController::class, 'demandes_en_cours'])->name('demandes_en_cours');
+
+        // Les Routes de ce middleware pour Update le compte de l'utilisateurs
+        Route::get('/update_role/{id}', [PostController::class, 'update_role'])->name('update_role');
+        Route::post('/up_role', [PostController::class, 'up_role'])->name('up_role');
+
+        // Les Routes de ce middleware pour Update les donées de demandes
+        Route::get('/update_demande/{id}', [PostController::class, 'update_demande'])->name('update_demande');
+        Route::post('/up_demande', [PostController::class, 'up_demande'])->name('up_demande');
+
+        //Route pour Télécharger le fichier PDF Stocké dans la base de donnée
+        Route::get('/download/{id}', [PostController::class, 'download'])->name('download');
+
+    });
 });
 require __DIR__.'/auth.php';
 
 
-//  Route pour notre page suivis du status
-Route::get('/status', function () {
-    return view('pages.navigation.status');
-})->middleware(['auth', 'verified'])->name('suivis du statut');
+
 
 
 // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

@@ -4,109 +4,102 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use GuzzleHttp\Client;
-
-
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+use App\Models\Requete;
 
 class DemandeController extends Controller
 {
-    //On va définir qui nous renvoie notre page de demande
-    public  function demande () {
+    // On va définir qui nous renvoie notre page de demande
+    public function requete()
+    {
         return view('pages.navigation.srequest');
     }
 
-    public function facture (Request $request) {
 
+    public function demande(Request $request)
+    {
+        // Validation des données du formulaire
+        $validatedData = $request->validate([
+            'prenom' => 'required',
+            'nom' => 'required',
+            'telephone' => 'nullable|numeric',
+            'type_batiment' => 'required',
+            'commune' => 'required',
+            'niveau' => 'required',
+            'dimensions' => 'required|numeric',
+            'fichiers' => 'required|array|min:7|max:7',
+            'fichiers.*' => 'required|mimes:pdf',
+        ]);
+
+        $prenom = $request->input('prenom');
+        $nom = $request->input('nom');
+        $telephone = $request->input('telephone');
+        $type_batiment = $request->input('type_batiment');
         $commune = $request->input('commune');
-        $typeBatiment = $request->input('type_batiment');
-        $dimensions = $request->input('dimensions');
         $niveau = $request->input('niveau');
+        $dimensions = $request->input('dimensions');
 
+        if ($request->hasFile('fichiers')) {
+            $files = $request->file('fichiers');
+            $pdf = [];
+
+            foreach ($files as $file) {
+                $filename = $file->getClientOriginalName();
+                $file->storeAs('pdf', $filename);
+                $pdf[] = $filename;
+            }
+
+        }
+        $json_pdf = json_encode($pdf);
+
+        // Déclaration des variables pour notre algorithme de facturation
         $quittance_mairie = 0;
-        $prix_total = 0;
         $quittance_domaine = 5000;
         $timbre_fiscal = 1000;
 
         if ($commune === 'Grand Yoff') {
-            if ($typeBatiment === 'Commercial') {
+            if ($type_batiment === 'Commercial') {
                 $quittance_mairie = $dimensions * 800 * $niveau;
-                $prix_total = $timbre_fiscal + $quittance_domaine + $quittance_mairie;
-            } elseif ($typeBatiment === 'Habitation') {
+            } elseif ($type_batiment === 'Habitation') {
                 $quittance_mairie = $dimensions * 300 * $niveau;
-                $prix_total = $timbre_fiscal + $quittance_domaine + $quittance_mairie;
             }
         } elseif ($commune === 'Thiès') {
-            if ($typeBatiment === 'Commercial') {
+            if ($type_batiment === 'Commercial') {
                 $quittance_mairie = $niveau * 100000;
-                $prix_total = $timbre_fiscal + $quittance_domaine + $quittance_mairie;
-            } elseif ($typeBatiment === 'Habitation') {
-                $quittance_mairie = $niveau * 500000;
-                $prix_total = $timbre_fiscal + $quittance_domaine + $quittance_mairie;
+            } elseif ($type_batiment === 'Habitation') {
+                $quittance_mairie = $niveau * 50000;
             }
         }
 
-        //On va envoyer la demande de paiement à Orange Money
-    //     $client = new Client ();
-    //     $response = $client->post('https://api.orange.com/orange-money-webpay/cm/v1/webpayment',
+        $prix_total = $timbre_fiscal + $quittance_domaine + $quittance_mairie;
 
-    //     [
-    //         'headers' => [
-    //             'Authorization' => 'Basic dGwyR0VReDlJMXFvYkFoSkhCa2d4RURRc2R1YWFhVDY6eWx0d2ZlbmQ3NUFualBWQQ==',
-    //             'Content-Type' => 'application/json',
-    //             'Accept' => 'application/json',
-    //         ],
-    //         'json' => [
-    //             'order_id' => uniqid(), // Générez un identifiant unique pour chaque paiement
-    //             'amount' => $prix_total,
-    //             'return_url' => url('/confirmation-paiement'), // L'URL de confirmation de paiement sur votre site
-    //         ],
-    //     ]
-    // );
-    //  $paymentUrl = json_decode($response->getBody(), true)['payment_url'];
+        $requete = new Requete();
+        $requete->prenom = $prenom;
+        $requete->nom = $nom;
+        $requete->telephone = $telephone;
+        $requete->type_batiment = $type_batiment;
+        $requete->commune = $commune;
+        $requete->niveau = $niveau;
+        $requete->dimensions = $dimensions;
+        $requete->fichier_pdf = $json_pdf;
+        $requete->prix_total = $prix_total;
+        $requete->user_id = auth()->id();
+        $requete->save();
 
-    return view('pages.navigation.facture',
-        ['quittance_mairie' => $quittance_mairie,
-        'prix_total' => $prix_total,
-        'quittance_domaine' => $quittance_domaine,
-        'timbre_fiscal' => $timbre_fiscal  /*, 'payment_url' => $paymentUrl*/]);
+        $requetes = Requete::where('user_id', auth()->id())->get();
+
+        return redirect()->route('suivis du statut')->with('requetes', $requetes);
 
     }
 
-    // public function paymentConfirmation (Request $request){
-    //      // Valider les données du formulaire
-    //      $request->validate([
-    //         'phone_number' => 'required|digits:9',
-    //     ]);
+    public function suivis (){
 
-    //      // Valider les données du formulaire
-    //      $request->validate([
-    //         'phone_number' => 'required|digits:9',
-    //     ]);
+        $requetes = Requete::where('user_id', auth()->id())->get();
 
-    //     if ($paymentStatus === 'SUCCESS') {
-    //         // Paiement réussi
-    //         $phoneNumber = $request->input('phone_number');
-    //         $amount = $request->input('amount');
-    //         $orderId = $request->input('order_id');
+        return view('pages.navigation.status', compact('requetes'));
 
-    //         // Enregistrement du paiement dans votre base de données
-    //         $payment = new Payment();
-    //         $payment->phone_number = $phoneNumber;
-    //         $payment->amount = $amount;
-    //         $payment->order_id = $orderId;
-    //         $payment->save();
-
-    //         // Redirection vers la page de confirmation
-    //         return redirect('/confirmation');
-    //     } else {
-    //         // Paiement échoué ou statut inconnu
-    //         return redirect()->back()->with('error', 'Le paiement a échoué. Veuillez réessayer.');
-    //     }
-    // }
-
-    // private function checkPaymentStatus($orderId)
-    // {
-    //     // Effectuer la vérification du statut du paiement auprès d'Orange Money
-    //     // et renvoyer le statut (par exemple : 'SUCCESS', 'FAILURE', 'PENDING', etc.)
-    // }
+    }
 }
+
+

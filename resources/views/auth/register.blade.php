@@ -1,6 +1,6 @@
 @include('navbar.navbar')
     {{-- Liaison de notre feuille de style --}}
-    <link rel="stylesheet" href="{{ asset ('assets/auth.css')}}">
+    <link rel="stylesheet" href="{{ asset ('css/auth.css')}}">
 
     <div class="contain">
         <h1>Inscription</h1>

@@ -1,0 +1,33 @@
+@import url(../assets/lib/bootstrap/css/bootstrap.css);
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 264px;
+    background-color: #f1f1f1;
+    padding-bottom: 50px;
+}
+
+
+.row{
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+
+section.cont{
+    margin-left:300px ;
+}
+
+button.btn{
+    width: 200px;
+}
+
+/* _________________________________________________________________________________ */
+.card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

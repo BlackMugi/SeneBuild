@@ -2,7 +2,7 @@
 @extends("base")
     @section("title", "À propos")
     @section("content")
-    <link rel="stylesheet" href="{{ asset ('assets/about.css')}}">
+    <link rel="stylesheet" href="{{ asset ('css/about.css')}}">
 
 
     {{-- Notre entête de page --}}

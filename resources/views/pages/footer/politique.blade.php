@@ -4,7 +4,7 @@
     @section("title", "Politique de confidentialité")
     @section("content")
     {{-- Liason de notre page avec du css --}}
-    <link rel="stylesheet" href="{{ asset ('assets/confid.css')}}">
+    <link rel="stylesheet" href="{{ asset ('css/confid.css')}}">
 
         {{-- L'entête de notre page --}}
         <Section class="header">
