@@ -40,6 +40,7 @@
                                 <th>Dimensions</th>
                                 <th>Prix total</th>
                                 <th>Etat</th>
+                                <th>Fait le</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -86,6 +87,7 @@
                                             <p class="text-danger">Refusé</p>
                                         @endif
                                     </td>
+                                    <td>{{ $requete->created_at }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

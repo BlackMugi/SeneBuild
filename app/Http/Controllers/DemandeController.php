@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use App\Models\Requete;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Response;
 
 class DemandeController extends Controller
 {
@@ -99,6 +101,16 @@ class DemandeController extends Controller
 
         return view('pages.navigation.status', compact('requetes'));
 
+    }
+
+    public function ressources(){
+        
+        $filePath = Storage::path('public/pdf/Ressources.pdf');
+        $headers = [
+            'Content-Type' => 'application/pdf',
+        ];
+
+        return Response::download($filePath, 'Ressources.pdf', $headers);
     }
 }
 

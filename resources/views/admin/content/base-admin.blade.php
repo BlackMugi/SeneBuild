@@ -13,13 +13,12 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <img src="{{asset("image/logo.png")}}" width="200px" height="150px">
-                    <h3>Panneau d'Administrateur</h3>
+                    <img id="logo"src="{{asset("image/logo.png")}}" width="200px" height="150px">
+                    <h3 id="h3">Panneau d'Administrateur</h3>
                 </div>
+                <div class="card-body">
 
-                    <div class="card-body">
-                        Welcome to the Admin Panel!
-                    </div>
+                </div>
                 </div>
             </div>
         </div>

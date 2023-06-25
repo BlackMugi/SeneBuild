@@ -6,6 +6,12 @@ section.header{
     margin-bottom: 30px;
 }
 
+section.body{
+    padding: 0;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
 h1{
     color: #ffff;
     font-weight: 600 bold;
@@ -15,7 +21,7 @@ h1{
 
 h2{
     text-align: center;
-    color: darkred;
+
 }
 div.intro-page{
     padding:20px;
@@ -29,4 +35,8 @@ div.intro-page{
     padding: 20px;
     font-size: larger;
     font-weight: bold;
+}
+
+h4{
+    margin-bottom: 50px;
 }

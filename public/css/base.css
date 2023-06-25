@@ -1,4 +1,4 @@
-@import url('../assets/lib/bootstrap/css/bootstrap.css');
+@import url(../assets/lib/bootstrap/css/bootstrap.css);
 footer.section1{
     width: auto;
     height: 450px;
@@ -30,7 +30,11 @@ footer.section1{
     transition: 0.2s;
  }
 
-
+#align{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
 
  a{
     text-decoration: none;
@@ -341,3 +345,6 @@ div.top-table{
     background-color: #0029ff;
     transition: 0.2s;
 }
+
+/* __________________________________________________________________________________________ */
+

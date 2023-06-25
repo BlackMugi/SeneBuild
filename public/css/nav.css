@@ -79,6 +79,7 @@ button.login:hover{
     cursor: pointer;
     border-radius: 20px;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .bloc-top:hover{
@@ -96,6 +97,10 @@ button.login:hover{
     margin-right: 10px;
 }
 
+#icon{
+    width: 32px;
+    height: 32px;
+}
 .dashboard{
     margin-right: 10px;
 }

@@ -94,6 +94,6 @@
                politique de confidentialité, n'hésitez pas à nous contacter.
             </p>
 
-            <h3>L'équipe SeneBuild</h3>
+            <h4>L'équipe SeneBuild</h4>
         </section>
     @endsection

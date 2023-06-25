@@ -1,14 +1,18 @@
-   @extends("base")
+<link rel="stylesheet" href="{{asset('css/dashboard.css')}}">
+@extends("base")
     @section("title", "Mon tableau de board")
     @section("content")
 
-    <h1>Mon Tableau de bord</h1>
+    <section class="header">
+        <h1 id="h1">Mon Tableau de bord</h1>
+    </section>
+
     <section class="top-page">
 
         <section class="dash">
             <div class="sect1">
                 <div class="set1">
-                   <a href="{{route('soumettre une demande')}}">
+                   <a id="liens" href="{{route('soumettre une demande')}}">
                     <div class="card" style="width: 18rem; height:19rem;">
                         <img src="{{('image/demande.png')}}" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -18,7 +22,7 @@
                     </a>
                 </div>
                 <div class="set1">
-                    <a href="{{route('suivis du statut')}}">
+                    <a id="liens" href="{{route('suivis du statut')}}">
                         <div class="card" style="width: 18rem; height:19rem;">
                             <img src="{{('image/suivis.png')}}" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -31,7 +35,7 @@
 
             <div class="sect1">
                 <div class="set1">
-                    <a href="{{route('profile.edit')}}">
+                    <a id="liens" href="{{route('profile.edit')}}">
                         <div class="card" style="width: 18rem; height:19rem;">
                             <img src="{{asset('image/profil.png')}}" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -41,7 +45,7 @@
                     </a>
                 </div>
                 <div class="set1">
-                    <a href="{{route('ressources outiles')}}">
+                    <a id="liens" href="{{route('ressources outiles')}}">
                         <div class="card" style="width: 18rem; height:19rem;">
                             <img src="{{('image/documentation.png')}}" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -54,12 +58,11 @@
         </section>
 
         <section class="info">
-            <div>Bienvenu {{ (Auth::user()->name) }} !</div>
+            <h4 style="margin-top:10%;  margin-left:11%; margin-right:11%;">Bienvenu {{ (Auth::user()->name) }} !</h4>
             @if (Auth::user()->is_admin =="1" )
-            <a href="{{route("admin.post.index")}}">
-                <button>Panneau d'administration</button>
-            </a>
-
+                <a href="{{route("admin.post.index")}}">
+                    <button class="btn btn-primary" style="width:90%; margin-left:5%; margin-right:5%; margin-top:10%;" type="button"><i class="fas fa-user-cog"></i>Panneau d'administration</button>
+                </a>
             @endif
 
         </section>

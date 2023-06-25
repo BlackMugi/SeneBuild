@@ -78,9 +78,15 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="{{route('admin.update_demande', ['id' => $requete->id])}}">
-                                        <button type="button" class="btn btn-primary">Voir</button>
-                                    </a>
+                                    @if ($requete->statut  === 'en cours')
+                                        <a href="{{route('admin.update_demande', ['id' => $requete->id])}}">
+                                            <button type="button" class="btn btn-primary">Traiter</button>
+                                        </a>
+                                    @else
+                                        <a href="{{route('admin.update_demande', ['id' => $requete->id])}}">
+                                            <button type="button" class="btn btn-primary">Voir</button>
+                                        </a>
+                                    @endif
                                 </td>
                             </tr>
                         @endforeach

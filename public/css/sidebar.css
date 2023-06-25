@@ -29,5 +29,13 @@ button.btn{
 .card-header{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.card-header #logo{
+    margin-left: 240px;
+}
+
+.card-header #h3{
+    margin-left: 400px;
 }

@@ -48,6 +48,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/srequest', [DemandeController::class, 'requete'])->name('soumettre une demande');
     Route::post('/srequest', [DemandeController::class, 'demande'])->name('demande');
     Route::get('/status', [DemandeController::class, 'suivis'])->name('suivis du statut');
+    Route::get('/ressources_pdf', [DemandeController::class, 'ressources'])->name('ressources');
 
     Route::middleware(['admin'])->name('admin.')->prefix('admin')->group(function () {
         Route::resource('post',Postcontroller::class);
@@ -66,9 +67,15 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/update_demande/{id}', [PostController::class, 'update_demande'])->name('update_demande');
         Route::post('/up_demande', [PostController::class, 'up_demande'])->name('up_demande');
 
+
         //Route pour Télécharger le fichier PDF Stocké dans la base de donnée
         Route::get('/download/{id}', [PostController::class, 'download'])->name('download');
 
+        //Route pour Affiché le Montant Total
+        Route::get('/montant_total', [PostController::class, 'comission'])->name('comission');
+
+        //Route pour Affiché le Montant du Jour
+        Route::get('/montant_du_jour', [PostController::class, 'daily_comission'])->name('comission du jour');
     });
 });
 require __DIR__.'/auth.php';
@@ -115,7 +122,11 @@ Route::get('/politique', function () {
 //  Route pour Notre page sommes nous
 Route::get('/qui-sommes-nous', function () {
     return view('pages.footer.qui-sommes-nous');
-})->name('qui sommes nous');;
+})->name('qui sommes nous');
+
+//  Route pour Notre page sommes nous
+
+
 
 // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 

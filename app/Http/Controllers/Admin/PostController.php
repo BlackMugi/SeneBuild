@@ -44,11 +44,22 @@ class PostController extends Controller
         // Calcul du pourcentage
         $pourcentage = ($nbruserreq / $nbruser) * 100;
 
+        // Pourcentage de demandes pour la commune "Grand Yoff"
+        $totalGrandYoff = Requete::where('commune', 'Grand Yoff')->count();
+        $pourcentageGrandYoff = ($totalGrandYoff / $nbrrequete) * 100;
+
+        // Pourcentage de demandes pour la commune "Thiès"
+        $totalThies = Requete::where('commune', 'Thiès')->count();
+        $pourcentageThies = ($totalThies / $nbrrequete) * 100;
+
+
         return view ('admin.post.admin_dashboard', compact('sommePrixTotal',
                                                            'sommePrixTotal1',
                                                            'nbruser',
                                                            'nbrrequete',
-                                                           'pourcentage'));
+                                                           'pourcentage',
+                                                           'pourcentageGrandYoff',
+                                                           'pourcentageThies'  ));
     }
 
     // Les Roles
@@ -164,6 +175,33 @@ class PostController extends Controller
         return response()->download($zipFileName)->deleteFileAfterSend(true);
     }
 
+    // Pour Affiché le Montant Total
+    public function comission()
+    {
+        $requetes = Requete::all();
+
+        // Pour calculer la totalité de ce qu'on a gagné
+        $sommePrixTotal = Requete::sum('prix_total');
+
+        return view ('admin.post.details.comission', compact('requetes', 'sommePrixTotal'));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+    *____________________________________________________________________________________
+    **/
 
     /**
      * Show the form for creating a new resource.

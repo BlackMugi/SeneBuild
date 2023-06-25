@@ -13,11 +13,11 @@
               <li><a class="dropdown-item" href="{{route('admin.demandes_refusees')}}"><i class="fas fa-times"></i> Demandes rejetées</a></li>
               <li><a class="dropdown-item" href="{{route('admin.demandes')}}"><i class="fas fa-file-alt"></i>Liste des demandes</a></li>
             </ul>
-          </div>
+        </div>
     </div>
-    <div class="logout">
-        <a href="{{route("logout")}}">
-            <button type="button" class="btn btn-link mt-4"><i class="fas fa-sign-out-alt"></i> Se déconnecter</button>
+    <div class="user-panel">
+        <a href="{{route('dashboard')}}">
+            <button type="button" class="btn btn-link mt-4"><i class="fas fa-user"></i>Espace Client</button>
         </a>
     </div>
 </div>

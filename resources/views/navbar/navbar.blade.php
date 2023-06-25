@@ -49,31 +49,49 @@
         <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
             @auth
 
-                <div class="dropdown">
+            <div class="dropdown mt-3" style="margin-right: 150px">
 
-                    <a href="{{ route ("profile.edit")}}">
+                {{-- Boutons du dropdown --}}
+                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" id="demandes-dropdown" data-bs-toggle="dropdown">
+                    <i class="fa fa-user"></i>
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="demandes-dropdown">
+                    <a id="align"  href="{{ route ("profile.edit")}}">
                         <button class="bloc-top">
                             <div>{{ substr(Auth::user()->name, 0, 1) }}</div>
                         </button>
+                        <p>Profil</p>
                     </a>
 
-                    <a href="{{ route ("dashboard")}}">
-                        <img class="dashboard" src="{{asset ('icon/dashboard.png')}}" alt="">
+                    <a id="align" class="align"  href="{{ route ("dashboard")}}">
+                        <i id="icon" class="fas fa-chart-bar"></i>
+                        <p>Tableau de board</p>
                     </a>
-
-
                     <div class="icon-logout">
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
-                            <x-responsive-nav-link :href="route('logout')"
+                            <x-responsive-nav-link class="align" id="align" :href="route('logout')"
                                 onclick="event.preventDefault();
                                 this.closest('form').submit();">
-                                <img class="logout" src="{{asset ("icon/deconnexion.png")}}" alt="Deconnexion">
+                                <i id="icon" class="fas fa-sign-out-alt"></i>
+                                <p>Se déconnecter</p>
                             </x-responsive-nav-link>
                         </form>
                     </div>
-                </div>
+                </ul>
+            </div>
+
+                {{-- <div class="dropdown">
+
+
+
+
+
+
+
+                </div> --}}
 
             @else
                 <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">

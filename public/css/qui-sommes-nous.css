@@ -30,19 +30,19 @@ div.sett{
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 27px;
-    
+
 }
 
 div.aligne1{
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 27px;
-    
+
 }
 
 h2{
     text-align: center;
-    color:darkred;
+    margin-top: 40px;
 }
 
 p.texte{
@@ -54,8 +54,5 @@ p.texte{
 }
 
 h4{
-    text-align:start;
-    margin:0;
-    padding:0;
-
+    margin-bottom: 50px;
 }

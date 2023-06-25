@@ -5,13 +5,16 @@
     <div class="header">
         @extends("base")
         @section("title", "Accueil")
+
+
         @section("content")
 
         <div class="top-page">
             <!--slogan-->
             <div class="slogan">
                 <h1>
-                    Votre permis de construire, <br>plus rapide, plus efficace!
+                    Votre permis de construire, <br>
+                    plus rapide, plus efficace!
                 </h1>
             </div>
 

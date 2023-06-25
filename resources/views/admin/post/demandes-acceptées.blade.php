@@ -30,7 +30,7 @@
                             <th>Dimensions</th>
                             <th>Prix total</th>
                             <th>Etat</th>
-                            <th>Téléchargement</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -78,6 +78,9 @@
                                     @endif
                                 </td>
                                 <td>
+                                    <a href="{{route('admin.update_demande', ['id' => $requete->id])}}">
+                                        <button type="button" class="btn btn-primary">Voir</button>
+                                    </a>
                                 </td>
                             </tr>
                         @endforeach
