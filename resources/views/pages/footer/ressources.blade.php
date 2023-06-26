@@ -1,15 +1,15 @@
 <link rel="stylesheet" href="{{asset('css/ressources.css')}}">
 @extends("base")
-    @section("title", "Ressources Outiles")
+    @section("title", "Ressources utiles")
     @section("content")
 
         <section class="header">
-            <h1 id="h1">Ressources Outiles</h1>
+            <h1 id="h1">Ressources utiles</h1>
         </section>
         <section class="body">
             <h4>Vous êtes sur le point de démarrer un projet de construction et
                 vous avez besoin d'aide pour comprendre le processus de demande de
-                permis de construire ? Ne cherchez plus ! Nous mettons à votre
+                permis de construire ? Ne cherchez plus !<br> Nous mettons à votre
                 disposition un guide complet et gratuit qui vous accompagnera pas
                 à pas dans la procédure de demande de permis de construire.
                 Téléchargez notre guide dès maintenant pour obtenir toutes les
@@ -28,7 +28,7 @@
             </div>
 
             <div class="role-section">
-                <h3>Role:</h3>
+                <h3>Rôle:</h3>
                 <p>En résumé, le permis de construire joue un rôle fondamental dans le processus de
                     construction en réglementant et en contrôlant le développement urbain.
                     Il permet d'assurer la conformité des nouvelles constructions aux normes et aux

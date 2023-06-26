@@ -19,4 +19,15 @@ section.body{
     margin-right: 150px;
 }
 
+h4{
+    text-align:center;
+}
 
+div{
+    text-align: center;
+    margin:40px;
+}
+
+div h3{
+    color:darkred;
+}
